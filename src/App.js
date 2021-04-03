@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-
-import './App.css'
+import { Route, Switch } from 'react-router'
 import Dropdown from './components/Dropdown'
-import Hero from './components/Hero'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import Home from './pages/index'
 
 function App() {
 	const [isOpen, setIsOpen] = useState(false)
@@ -28,7 +28,11 @@ function App() {
 		<div className='App'>
 			<Navbar toggle={toggle} />
 			<Dropdown isOpen={isOpen} toggle={toggle} />
-			<Hero />
+			<Switch>
+				<Route path='/' exact component={Home} />
+			</Switch>
+			<Home />
+			<Footer />
 		</div>
 	)
 }
