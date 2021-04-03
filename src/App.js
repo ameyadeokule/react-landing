@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import './App.css'
 import Dropdown from './components/Dropdown'
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 		<div className='App'>
 			<Navbar toggle={toggle} />
 			<Dropdown isOpen={isOpen} toggle={toggle} />
+			<Hero />
 		</div>
 	)
 }
